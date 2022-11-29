@@ -186,5 +186,7 @@
 		"status"	=>		"Status",
 		"amount"	=>		"Amount",
 		"icousers"	=>		"ICOsUsers",
-
+		"contacts"	=>		"Contacts",
+		"subject"	=>		"Subject",
+		"message"	=>		"Message",
 ];

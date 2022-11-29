@@ -74,6 +74,8 @@ Route::group(['prefix' => app('admin'), 'middleware' => 'Lang'], function () {
 		Route::post('icousers/multi_delete','Admin\IcoUsers@multi_delete'); 
 		Route::post('icousers/get/status','Admin\IcoUsers@get_status'); 
 		Route::post('icousers/get/purchase/method','Admin\IcoUsers@get_purchase_method'); 
+		Route::resource('contacts','Admin\Contacts')->except(['create']); 
+		Route::post('contacts/multi_delete','Admin\Contacts@multi_delete'); 
 		////////AdminRoutes/*End*///////////////
 	});
 

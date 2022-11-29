@@ -233,12 +233,6 @@ with font-awesome or any other icon font library -->
           <p>{{trans('admin.users')}} </p>
         </a>
       </li>
-      <li class="nav-item">
-        <a href="{{ aurl('users/create') }}" class="nav-link">
-          <i class="fas fa-plus nav-icon"></i>
-          <p>{{trans('admin.create')}} </p>
-        </a>
-      </li>
     </ul>
   </li>
   @endif
@@ -432,3 +426,24 @@ with font-awesome or any other icon font library -->
 </li>
 @endif
 <!--icousers_end_route-->
+<!--contacts_start_route-->
+@if(admin()->user()->role("contacts_show"))
+<li class="nav-item {{active_link('contacts','menu-open')}} ">
+  <a href="#" class="nav-link {{active_link('contacts','active')}}">
+    <i class="nav-icon fa fa-icons"></i>
+    <p>
+      {{trans('admin.contacts')}} 
+      <i class="right fas fa-angle-left"></i>
+    </p>
+  </a>
+  <ul class="nav nav-treeview">
+    <li class="nav-item">
+      <a href="{{aurl('contacts')}}" class="nav-link  {{active_link('contacts','active')}}">
+        <i class="fa fa-icons nav-icon"></i>
+        <p>{{trans('admin.contacts')}} </p>
+      </a>
+    </li>
+  </ul>
+</li>
+@endif
+<!--contacts_end_route-->
