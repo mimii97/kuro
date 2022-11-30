@@ -177,7 +177,17 @@ class UserBFOTPlansDataTable extends DataTable
 			'name'=>'bfot_revenue',
 			'data'=>'bfot_revenue',
 			'title'=>trans('user.bfot_revenue'),
-	   ],
+	   	],
+		   [
+			'name'=>'num_paid_refs',
+			'data'=>'num_paid_refs',
+			'title'=>trans('admin.num_paid_refs'),
+		],
+		[
+			'name'=>'paid_bfot_plan_balance',
+			'data'=>'paid_bfot_plan_balance',
+			'title'=>trans('admin.paid_bfot_plan_balance'),
+		],
            
     	 ];
 			}

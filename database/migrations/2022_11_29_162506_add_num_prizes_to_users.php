@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddKuroBalanceToUsers extends Migration
+class AddNumPrizesToUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -14,8 +14,12 @@ class AddKuroBalanceToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            //
-            $table->double('kuro_balance')->default(0);
+            $table->integer('num_vote_plan_paid_prizes')->default(0);
+            $table->integer('num_bfot_plan_paid_prizes')->default(0);
+            $table->integer('num_paid_votes')->default(0);
+            $table->integer('paid_vote_plan_balance')->default(0);
+            $table->integer('num_paid_refs')->default(0);
+            $table->integer('paid_bfot_plan_balance')->default(0);
         });
     }
 

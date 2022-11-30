@@ -36,7 +36,7 @@ protected $fillable = [
     */
     //get number of likes on a blog
    public function likes(){
-      return $this->hasMany(\App\Models\Reaction::class)->where('like', '!=', 0)->count('like');
+      return $this->hasMany(\App\Models\Reaction::class)->where('like', '!=', 0);
    }
 
 	/**
@@ -46,7 +46,7 @@ protected $fillable = [
     */
     //get number of dislikes on a blog
    public function dislikes(){
-      return $this->hasMany(\App\Models\Reaction::class)->where('dislike', '!=', 0)->count('dislike');
+      return $this->hasMany(\App\Models\Reaction::class)->where('dislike', '!=', 0);
    }
 
 	/**
@@ -56,7 +56,7 @@ protected $fillable = [
     */
     //get number of comments on a blog
    public function comments(){
-      return $this->hasMany(\App\Models\Comment::class)->count('id');
+      return $this->hasMany(\App\Models\Comment::class);
    }
 
  	

@@ -13,16 +13,23 @@ class UserVotePlansDataTable extends DataTable
     {
         return datatables($query)
 			->addColumn('num_comments', function ($vote_plan_for_this_user) {
-				return $vote_plan_for_this_user->users()->find(auth()->user()->id)->comments();	
+				return $vote_plan_for_this_user->users()->find(auth()->user()->id)->comments()->count('id');	
 			})
 			->addColumn('num_likes', function ($vote_plan_for_this_user) {
-				return $vote_plan_for_this_user->users()->find(auth()->user()->id)->likes();	
+				return $vote_plan_for_this_user->users()->find(auth()->user()->id)->likes()->count('like');	
 			})
 			->addColumn('num_dislikes', function ($vote_plan_for_this_user) {
-				return $vote_plan_for_this_user->users()->find(auth()->user()->id)->dislikes();	
+				return $vote_plan_for_this_user->users()->find(auth()->user()->id)->dislikes()->count('dislike');	
 			})
 			->addColumn('vote_revenue', function ($vote_plan_for_this_user) {
 				return $vote_plan_for_this_user->users()->find(auth()->user()->id)->vote_revenue($vote_plan_for_this_user);	
+			})
+			->addColumn('kuro_balance', function ($vote_plan_for_this_user) {
+				return $vote_plan_for_this_user->users()->find(auth()->user()->id)->kuro_balance;	
+			})
+
+			->addColumn('kuro_balance', function ($vote_plan_for_this_user) {
+				return $vote_plan_for_this_user->users()->find(auth()->user()->id)->kuro_balance;	
 			})
 			->addColumn('kuro_balance', function ($vote_plan_for_this_user) {
 				return $vote_plan_for_this_user->users()->find(auth()->user()->id)->kuro_balance;	
@@ -204,6 +211,16 @@ class UserVotePlansDataTable extends DataTable
 				'data'=>'vote_revenue',
 				'title'=>trans('user.user_vote_revenue'),
 			],
+			[
+				'name'=>'num_paid_votes',
+				'data'=>'num_paid_votes',
+				'title'=>trans('admin.num_paid_votes'),
+		   ],
+		   [
+				'name'=>'paid_vote_plan_balance',
+				'data'=>'paid_vote_plan_balance',
+				'title'=>trans('admin.paid_vote_plan_balance'),
+	  	 	],
             
     	 ];
 			}
