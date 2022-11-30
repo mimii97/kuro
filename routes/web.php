@@ -62,5 +62,5 @@ Route::get('/Beteam', [App\Http\Controllers\User\HomeController::class, 'Beteam'
 
 Auth::routes();
 
-
+// 
 
