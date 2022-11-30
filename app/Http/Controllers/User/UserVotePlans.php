@@ -15,7 +15,7 @@ class UserVotePlans extends Controller
 {
 /*
 ->addColumn('num_comments', function ($vote_plan_for_this_user) {
-			return $vote_plan_for_this_user->users()->find(auth()->user()->id)->comments();	
+			return $vote_plan_for_this_user->users()->find(auth()->user()->id)->comments()->count();	
 		})
 		->addColumn('num_likes', function ($vote_plan_for_this_user) {
 			return $vote_plan_for_this_user->users()->find(auth()->user()->id)->likes();	

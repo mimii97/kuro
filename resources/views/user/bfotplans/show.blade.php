@@ -37,8 +37,13 @@
 			</div>
 
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-				<b>{{trans('admin.num_of_refs')}} :</b>
-				{!! $bfotplans->num_of_refs !!}
+				<b>{{trans('admin.kuro_balance_cond')}} :</b>
+				{!! $bfotplans->kuro_balance_cond !!}
+			</div>
+
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+				<b>{{trans('admin.num_of_refs_cond')}} :</b>
+				{!! $bfotplans->num_of_refs_cond !!}
 			</div>
 
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">

@@ -200,11 +200,31 @@ class UsersDataTable extends DataTable
 				'data'=>'bfot_revenue',
 				'title'=>trans('admin.bfot_revenue'),
 			],
-				[
+			[
                  'name'=>'kuro_balance',
                  'data'=>'kuro_balance',
                  'title'=>trans('admin.kuro_balance'),
 		    ],
+			[
+				'name'=>'num_paid_votes',
+				'data'=>'num_paid_votes',
+				'title'=>trans('admin.num_paid_votes'),
+		   ],
+		   [
+				'name'=>'paid_vote_plan_balance',
+				'data'=>'paid_vote_plan_balance',
+				'title'=>trans('admin.paid_vote_plan_balance'),
+	  	 	],
+			[
+				'name'=>'num_paid_refs',
+				'data'=>'num_paid_refs',
+				'title'=>trans('admin.num_paid_refs'),
+			],
+			[
+				'name'=>'paid_bfot_plan_balance',
+				'data'=>'paid_bfot_plan_balance',
+				'title'=>trans('admin.paid_bfot_plan_balance'),
+			],
             [
 	                'name' => 'created_at',
 	                'data' => 'created_at',

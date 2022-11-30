@@ -44,8 +44,13 @@ class Users extends Controller
               }*/
               //$user->vote();
                 //dd(VotePlan::query()->select("vote_plans.*")->where('id', 1)->firstOrFail());
+				//check if conditions are true
+				//$user = User::find(auth()->user()->id);
+				//$vote_plan = VotePlan::find(1);
+		
                 return $users->render('admin.users.index',['title'=>trans('admin.users')]);
-            }
+            //}
+		}
 
 
             

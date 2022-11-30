@@ -62,29 +62,40 @@
 			</div>
 			<div class="clearfix"></div>
 			<hr />
-			@if(!empty($bfotplans->admin_id()->first()))
+
+			@if(!empty($bfotplans->admin_id()->first()))
 			<div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
 				<b>{{trans('admin.admin_id')}} :</b>
 				{{ $bfotplans->admin_id()->first()->name }}
 			</div>
 			@endif
-			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 				<b>{{trans('admin.type')}} :</b>
 				{!! $bfotplans->type !!}
 			</div>
-			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<b>{{trans('admin.description')}} :</b>
 				{!! $bfotplans->description !!}
 			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-				<b>{{trans('admin.num_of_refs')}} :</b>
-				{!! $bfotplans->num_of_refs !!}
+
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+				<b>{{trans('admin.kuro_balance_cond')}} :</b>
+				{!! $bfotplans->kuro_balance_cond !!}
 			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+				<b>{{trans('admin.num_of_refs_cond')}} :</b>
+				{!! $bfotplans->num_of_refs_cond !!}
+			</div>
+
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 				<b>{{trans('admin.revenue')}} :</b>
 				{!! $bfotplans->revenue !!}
 			</div>
-			<!-- /.row -->
+
+			<!-- /.row -->
 		</div>
 	</div>
 	<!-- /.card-body -->

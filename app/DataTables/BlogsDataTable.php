@@ -16,13 +16,13 @@ class BlogsDataTable extends DataTable
 			
             ->addColumn('image', '{!! view("admin.show_image",["image"=>$image])->render() !!}')
 			->addColumn('comments', function ($blog) {
-				return $blog->comments();	
+				return $blog->comments()->count('id');	
 			})
 			->addColumn('likes', function ($blog) {
-				return $blog->likes();	
+				return $blog->likes()->count('like');	
 			})
 			->addColumn('dislikes', function ($blog) {
-				return $blog->dislikes();	
+				return $blog->dislikes()->count('dislike');	
 			})
    			->addColumn('created_at', '{{ date("Y-m-d H:i:s",strtotime($created_at)) }}')
 			->addColumn('updated_at', '{{ date("Y-m-d H:i:s",strtotime($updated_at)) }}')
