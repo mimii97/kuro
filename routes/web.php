@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Spatie\Honeypot\ProtectAgainstSpam;
 
-\L::LangNonymous();
+// L::LangNonymous();
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -53,7 +53,14 @@ Route::get('/', function () {
 });
 
 
+Route::get('/home', [App\Http\Controllers\User\HomeController::class, 'index'])->name('home');
+Route::get('/blog', [App\Http\Controllers\User\HomeController::class, 'blog'])->name('blog');
+Route::get('/ICO', [App\Http\Controllers\User\HomeController::class, 'ICO'])->name('ICO');
+Route::get('/vote', [App\Http\Controllers\User\HomeController::class, 'vote'])->name('vote');
+Route::get('/about', [App\Http\Controllers\User\HomeController::class, 'about'])->name('about');
+Route::get('/Beteam', [App\Http\Controllers\User\HomeController::class, 'Beteam'])->name('Beteam');
+
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\User\HomeController::class, 'index'])->name('home');
+
 

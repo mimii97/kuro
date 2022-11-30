@@ -1,5 +1,6 @@
 <?php
 namespace App\Models;
+use App\Models\Slide;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -21,7 +22,7 @@ protected $fillable = [
 	];
 
    public function slide(){
-      return $this->belongsTo(\App\Models\Blog::class);
+      return $this->belongsTo(Slide::class);
    }
 
  	
