@@ -42,8 +42,8 @@
 
           <article class="entry">
 
-            <div class="entry-img">
-              <img src="storage/{{$blog->image}}" alt="" class="img-fluid">
+            <div class="entry-img" >
+              <img src="storage/{{$blog->image}}" style="border-radius: 2%" alt="" class="img-fluid">
             </div>
 
             <h2 class="entry-title">
